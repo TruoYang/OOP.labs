@@ -1,0 +1,24 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class array {
+    public static void main (String args[]) {
+        Scanner keyboard = new Scanner(System.in);
+        
+        System.out.print("Enter the size of array: ");
+        int n = keyboard.nextInt(); double sum = 0;
+
+        int[] num = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter num[" + i + "]: ");
+            num[i] = keyboard.nextInt();
+            sum += num[i];
+        }
+        Arrays.sort(num);
+        System.out.println("The sorted array:");
+        for (int i = 0; i < n; i++) {
+            System.out.println("number[" + i + "] = " + num[i]);
+        }
+        System.out.print("The avarage is: " + (sum / n));
+    }
+}
