@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class input{
+public static void main(String args[]){
+    Scanner keyboard =  new Scanner(System.in);
+
+    System.out.println("Enter your name: ");
+
+    String name = keyboard.nextLine(); 
+
+    System.out.println("Enter your age: ");
+    int age = keyboard.nextInt();
+
+    System.out.println("Enter your height(cm): ");
+    double height = keyboard.nextDouble();
+
+    //similar to other data types
+
+    //nextByte(), nextShort(), nextLong()
+
+    //nextFloat(), nextBoolean()I
+
+    System.out.println("Mrs/Ms." + name + "," + age + " years old. " + "Your height is: " + height + "cm.");
+  }
+}
