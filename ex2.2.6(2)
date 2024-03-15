@@ -1,0 +1,30 @@
+import javax.swing.JOptionPane;
+
+public class 2ndEquation {
+    public static void main(String args[]) {
+        String num1, num2, num3;
+        System.out.println("The equation form is ax^2 + bx +c = 0");
+        num1 = JOptionPane.showInputDialog("Enter the number a = ");
+        num2 = JOptionPane.showInputDialog("Enter the number b = ");
+        num3 = JOptionPane.showInputDialog("Enter the number c = ");
+
+        Double a = Double.parseDouble(num1);
+        Double b = Double.parseDouble(num2);
+        Double c = Double.parseDouble(num3);
+        
+        if (a == 0) {
+            if (b == 0) {
+                if (c == 0) System.out.print("The equation has infinite solution");
+                else System.out.print("The equation has no solution");
+            } else System.out.print("The equation has 1 solution: " +(-c/b));
+        } else {
+            Double delta = b*b-4*a*c;
+            if (delta < 0) System.out.print("The equation has no solution");
+            else if (delta == 0) System.out.print("The equation has 1 solution: " +(-b/(2*a)));
+            else {
+                System.out.println("The first solution is: " + ((-b + Math.sqrt(delta)) / (2 * a)));
+                System.out.println("The second solution is: " + ((-b - Math.sqrt(delta)) / (2 * a)));
+            }
+        }
+    }
+}
