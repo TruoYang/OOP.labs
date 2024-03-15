@@ -1,0 +1,17 @@
+import javax.swing.JOptionPane;
+
+public class 1stEquation{
+    public static void main(String args[]) {
+        String num1, num2;
+        System.out.println("Form of equationis ax + b = 0");
+        num1 = JOptionPane.showInputDialog("Enter the number a: ");
+        num2 = JOptionPane.showInputDialog("Enter the number b: ");
+
+        Double a = Double.parseDouble(num1);
+        Double b = Double.parseDouble(num2);
+        if (a != 0) {
+            System.out.println("The solution of "+a +"x + "+b +" is: "+(-b/a));
+        } else System.out.print("The equation has no solution");
+        System.exit(0);
+    }
+}
