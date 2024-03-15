@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Matrix {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of Matrixs rows: ");
+        int rw = scanner.nextInt();
+        System.out.print("Enter the number of Matrixs columns: ");
+        int cl = scanner.nextInt();
+        int[][] mat1 = new int[rw][cl];
+        int[][] mat2 = new int[rw][cl];
+        System.out.println("Enter the first matrix:");
+        for (int i = 0; i < mat1.length; i++) {
+            for (int j = 0; j < mat1[0].length; j++) {
+                System.out.print("Enter first matrix [" + (i + 1) + ", " + (j + 1) + "]: ");
+                mat1[i][j] = scanner.nextInt();
+            }
+        }
+        int[][] summat = new int[rw][cl];
+        System.out.println("Enter the second matrix:");
+        for (int i = 0; i < mat2.length; i++) {
+            for (int j = 0; j < mat2[0].length; j++) {
+                System.out.print("Enter mat2 [" + (i + 1) + ", " + (j + 1) + "]: ");
+                mat2[i][j] = scanner.nextInt();
+                summat[i][j] = mat1[i][j] + mat2[i][j];
+            }
+        }
+        System.out.println("Sum of the two matrices:");
+        displayMatrix(summat);
+
+        scanner.close();
+    }
+
+    // Display matrix
+    public static void displayMatrix(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
