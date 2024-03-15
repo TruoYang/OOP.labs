@@ -1,0 +1,26 @@
+import java.until.Scanner;
+public class unum25 {
+	 public static void main(String[] args) {
+          
+	        Scanner scanner = new Scanner(System.in);
+	        System.out.print("Input the first number: ");
+	        double num1 = scanner.nextDouble();
+	        System.out.print("Input the second number: ");
+	        double num2 = scanner.nextDouble();
+	        double sum = num1 + num2;
+	        double dif = num1 - num2;
+	        double prd = num1*num2;
+	        System.out.println("The sum is: "+ sum);
+	        System.out.println("The difference is: "+ dif);
+	        System.out.println("The product is: " + prd);
+
+	        if (num2 == 0) {
+	            System.out.println("The divisor is not valid");
+	        }
+	        else {
+	            double qtt = num1/num2;
+	            System.out.println("The quotient is: " + qtt);
+             System.exit(0);
+	        }
+	    }
+}
