@@ -1,0 +1,51 @@
+
+public class DigitalVideoDisc {
+    
+    private String title;
+    private String categry;
+    private String dir;
+    private int length;
+    private float cost;
+
+    public String getTitle(){
+        return title;
+    }
+
+    public String ge categry(){
+        return categry;
+    }
+
+    public String getDir(){
+        return dir;
+    }
+
+    public int getLength(){
+        return length;
+    }
+
+    public double getCost(){
+        return cost;
+    }
+
+    public DigitalVideoDisc(String tile){
+        this.title = tile;
+    }
+    public DigitalVideoDisc (String categry, String tile, float cost){
+        this categry = categry;
+        this.title = tile;
+        this.cost = cost;
+    }
+    public DigitalVideoDisc (String dir,String categry, String tile, float cost){
+        this.dir = dir;
+        this categry = categry;
+        this.title = tile;
+        this.cost = cost;
+    }
+    public DigitalVideoDisc(String tile, String categry, String dir, int length, float cost){
+        this.dir = dir;
+        this categry = categry;
+        this.title = tile;
+        this.length = length;
+        this.cost = cost;
+    }
+}
